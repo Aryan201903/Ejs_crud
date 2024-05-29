@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <div
+        style="width: 1200px;margin: 0 auto; border: 1px solid blue;background-color: yellow;color: blue;font-size: 24px;">
+        <h3><a href="/">Home</a></h3>
+        <h1>List of Users</h1>
+        <table align="center" border="1" cellspacing="5">
+            <tr>
+
+                <td>UserId</td>
+                <td>Fname</td>
+                <td>Lname</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Password</td>
+            </tr>
+            <% for(let i=0; i < result.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= result[i].userId %>
+                    </td>
+                    <td>
+                        <%= result[i].firstName %>
+                    </td>
+                    <td>
+                        <%= result[i].lastName %>
+                    </td>
+                    <td>
+                        <%= result[i].username%>
+                    </td>
+                    <td>
+                        <%= result[i].email %>
+                    </td>
+                    <td>
+                        <%= result[i].password %>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
+</body>
+
+</html>

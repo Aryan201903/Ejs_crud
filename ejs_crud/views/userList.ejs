@@ -1,0 +1,43 @@
+<html>
+
+<body>
+    <div
+        style="width: 1200px;margin: 0 auto; border: 1px solid blue;background-color: rgb(0, 255, 132);color: rgb(255, 0, 115);font-size: 24px;">
+        <h3><a href="/">Home</a></h3>
+        <h1>List of Users</h1>
+        <table align="center" border="1" cellspacing="5">
+            <tr>
+                <td>User Id</td>
+                <td>Name</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Action</td>
+            </tr>
+            <% for(let i=0;i<result.length;i++){ %>
+                <tr>
+                    <td>
+                        <%=result[i].uid%>
+                    </td>
+                    <td>
+                        <%=result[i].fname+" "+result[i].lname%>
+                    </td>
+                    <td>
+                        <%=result[i].uname%>
+                    </td>
+                    <td>
+                        <%=result[i].mail%>
+                    </td>
+                    <td>
+                        <%=result[i].psd%>
+                    </td>
+                    <td><a href=" /edituser?id=<%=result[i].uid%>">Edit</a>&nbsp;--<a
+                                href="/deluser?id=<%=result[i].uid%>">Delete</a>
+                    </td>
+                </tr>
+                <% } %>
+        </table>
+    </div>
+</body>
+
+</html>

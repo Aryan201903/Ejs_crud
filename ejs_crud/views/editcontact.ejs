@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+</head>
+
+<body>
+    <h3><a href="/showcontact">Back</a></h3>
+    <h1 style="text-align: center;">Edit</h1>
+    <div style="width: fit-content;margin:0 auto;border:2px solid black;">
+        <form action="/contactedit_submit" method="post">
+            <table align="center" border="1">
+                <tr>
+                    <td>UID</td>
+                    <td><input type="number" name="uid" value="<%=result[0].uid%>" readonly /></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="uname" value="<%=result[0].uname%>" /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="mail" value="<%=result[0].mail%>" /></td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td><input type="text" name="msg" value="<%=result[0].msg%>" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="update" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
